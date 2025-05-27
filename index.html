@@ -1,34 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Exemple de page HTML mal faite</title>
+  <meta charset="UTF-8">
+  <title>Connexion Gamer</title>
   <style>
-    /* Mauvaise pratique : style inline dans le head */
-    body { font-family: Arial, sans-serif; color: #333 }
-    /* Manque de point-virgule et propriété invalide */
-    p { font-size: 16px color: red }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f url('https://wallpapercave.com/wp/wp2466012.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .login-box {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #0ff;
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      margin-bottom: 30px;
+      color: #0ff;
+      font-size: 28px;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      background: #1c1c1c;
+      color: #0ff;
+      border-bottom: 2px solid #0ff;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .login-box input[type="submit"] {
+      background: #0ff;
+      color: #000;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      font-weight: bold;
+    }
+
+    .login-box input[type="submit"]:hover {
+      background: #00cccc;
+    }
+
+    .login-box a {
+      display: block;
+      margin-top: 15px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .login-box a:hover {
+      text-decoration: underline;
+    }
   </style>
+  <!-- Optionnel : Google Fonts pour une police futuriste -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <h1>Bienvenue sur ma page</h1>
-  <h2>c'est la deusieme modif</h2>
-  <!-- Balise img sans attribut alt -->
-  <img src="image.jpg">
-
-  <!-- Balise <a> avec href vide -->
-  <a href="">Clique ici</a>
-
-  <!-- Balise <div> non fermée volontairement -->
-  <div>
-    <p>Un paragraphe mal formé
-  <!-- Absence de fermeture de div et p -->
-
-  <!-- Utilisation d'attributs HTML obsolètes -->
-  <font color="blue">Texte en bleu</font>
-
-  <!-- Mauvaise indentation -->
-<p>Un autre paragraphe.</p>
-
+  <div class="login-box">
+    <h2>Connexion Gamer</h2>
+    <form action="/login" method="post">
+      <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+      <input type="password" name="password" placeholder="Mot de passe" required>
+      <input type="submit" value="Connexion">
+    </form>
+    <a href="#">Mot de passe oublié ?</a>
+    <a href="#">Créer un compte</a>
+  </div>
 </body>
 </html>
